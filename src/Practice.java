@@ -7,7 +7,18 @@ public class Practice {
      */
     public static int maxDiff(int[] nums) {
         // TODO: implement this
-        return -1;
+        int smallestNum = nums[0];
+        int biggestNum = nums[0];
+
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] > biggestNum ) {
+                biggestNum = nums[i];
+            }
+            if(nums[i] < smallestNum) {
+            smallestNum = nums[i];
+            }
+        }
+        return biggestNum - smallestNum;
     }
 
 
