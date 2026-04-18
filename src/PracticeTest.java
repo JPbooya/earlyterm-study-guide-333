@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.HashMap;
 public class PracticeTest {
 
     // TODO: Make more tests for maxDiff
@@ -28,6 +30,40 @@ public class PracticeTest {
         int[] numbers = {1, 2, 3, 4, 5};
         int actual = Practice.maxDiff(numbers);
         assertEquals(4, actual);
+    }
+    // ------- //
+    @Test
+    void testForLongestStrFewWords() {
+        HashMap<String, String> words = new HashMap<>();
+        words.put("apple", "fruit");
+        words.put("astronaunt", "person");
+        words.put("adamsilver", "person");
+
+        String actual = Practice.longestWord(words, 'a');
+
+        assertEquals("adamsilver", actual);
+    }
+
+    @Test
+    void testForLongestStrNoMatch() {
+        HashMap<String, String> words = new HashMap<>();
+        words.put("apple", "fruit");
+        words.put("astronaunt", "person");
+        words.put("adamsilver", "person");
+
+        String actual = Practice.longestWord(words, 'z');
+
+        assertEquals("", actual);
+    }
+
+    @Test
+    void testForLongestStrNoVals() {
+        HashMap<String, String> words = new HashMap<>();
+
+
+        String actual = Practice.longestWord(words, 'z');
+
+        assertEquals("", actual);
     }
     
 

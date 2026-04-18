@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -19,6 +21,22 @@ public class Practice {
             }
         }
         return biggestNum - smallestNum;
+    }
+
+    public static String longestWord(HashMap<String, String> words, char letter) {
+        String longestStr = "";
+        for(String word : words.keySet()) {
+            if(word.startsWith(String.valueOf(letter)) 
+
+                &&
+
+                word.length() > longestStr.length()) {
+
+                longestStr = word;
+                
+            }
+        }
+        return longestStr;
     }
 
 
