@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 public class PracticeTest {
 
@@ -64,6 +65,19 @@ public class PracticeTest {
         String actual = Practice.longestWord(words, 'z');
 
         assertEquals("", actual);
+    }
+    // ---- // 
+    @Test
+    void testForCountWordsInBetween() {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("banana");
+        words.add("cat");
+        words.add("bear");
+
+        int actual = Practice.countWords(words, 1, 5);
+
+        assertEquals(2, actual);
     }
     
 

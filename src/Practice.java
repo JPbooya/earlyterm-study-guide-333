@@ -27,16 +27,24 @@ public class Practice {
         String longestStr = "";
         for(String word : words.keySet()) {
             if(word.startsWith(String.valueOf(letter)) 
-
-                &&
-
-                word.length() > longestStr.length()) {
-
-                longestStr = word;
-                
+            &&
+            word.length() > longestStr.length()) {
+            longestStr = word;
             }
         }
         return longestStr;
+    }
+
+    public static int countWords (ArrayList<String> wordLists, int n, int m) {
+        int count = 0;
+        for(int i = 0; i < wordLists.size(); i++) {
+            if(wordLists.get(i).length() > n 
+            && 
+            wordLists.get(i).length() < m) {
+                count++;
+            }
+        }
+        return count;
     }
 
 
