@@ -47,6 +47,21 @@ public class Practice {
         return count;
     }
 
+    public static int countDifNums(HashSet<Integer> oddIntsSet) {
+        int evenNums = 0;
+        int oddNums = 0;
+
+        for(Integer numbers : oddIntsSet) {
+            if(numbers % 2 == 0) {
+                evenNums++;
+            }
+            if(numbers % 2 == 1) {
+                oddNums++;
+            }
+        }
+        return Math.abs(evenNums - oddNums);
+    }
+
 
     // TODO: Implement the other methods from the README AND tests for each one
 

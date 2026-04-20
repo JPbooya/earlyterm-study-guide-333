@@ -3,6 +3,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 public class PracticeTest {
 
     // TODO: Make more tests for maxDiff
@@ -79,7 +80,52 @@ public class PracticeTest {
 
         assertEquals(2, actual);
     }
+
+
+
+
+
+
+
+
+
+
+
+    // ---- // 
+    @Test
+    void testForDifOddEvenNums() {
+        HashSet<Integer> intSet = new HashSet<>();
+        intSet.add(1);
+        intSet.add(3);
+        intSet.add(5);
+        intSet.add(7);
+        int actual = Practice.countDifNums(intSet);
+        assertEquals(4, actual);
+    }
+
+    @Test
+    void testForEvenNums() {
+        HashSet<Integer> intSet = new HashSet<>();
+        intSet.add(2);
+        intSet.add(4);
+        intSet.add(6);
+        intSet.add(8);
+        int actual = Practice.countDifNums(intSet);
+        assertEquals(4, actual);
+    }
     
+     @Test
+    void testForMixNums() {
+        HashSet<Integer> intSet = new HashSet<>();
+        intSet.add(1);
+        intSet.add(2);
+        intSet.add(4);
+        intSet.add(6);
+        intSet.add(7);
+        intSet.add(9);
+        int actual = Practice.countDifNums(intSet);
+        assertEquals(0, actual);
+    }
 
     // TODO: Make tests for each problem you solve
     
