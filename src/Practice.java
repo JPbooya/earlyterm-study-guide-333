@@ -62,6 +62,22 @@ public class Practice {
         return Math.abs(evenNums - oddNums);
     }
 
+    public static int secondLargestNum(HashMap<String, Integer> players) {
+        int largestNum = Integer.MIN_VALUE;
+        int secondLargestNum = Integer.MIN_VALUE;
+        for(Integer number : players.values()) {
+            if(number > largestNum) {
+                secondLargestNum = largestNum;
+                largestNum = number;
+                } else {
+                    if(number > secondLargestNum) {
+                        secondLargestNum = number;
+                    }
+                }
+            }
+        return secondLargestNum;
+    }
+
 
     // TODO: Implement the other methods from the README AND tests for each one
 

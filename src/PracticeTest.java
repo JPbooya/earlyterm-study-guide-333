@@ -127,6 +127,41 @@ public class PracticeTest {
         assertEquals(0, actual);
     }
 
+    // ----- // 
+
+    @Test 
+    void testForsecondLargestNum() {
+        HashMap<String, Integer>intMap = new HashMap<>();
+        intMap.put("curry", 8);
+        intMap.put("lebron", 23);
+        intMap.put("adamsilver", 13);
+        intMap.put("durant", 12);
+        int actual = Practice.secondLargestNum(intMap);
+        assertEquals(13, actual);
+    }
+
+     @Test 
+    void testForTwoNumsOnly() {
+        HashMap<String, Integer>intMap = new HashMap<>();
+        intMap.put("curry", 8);
+        intMap.put("lebron", 23);
+        int actual = Practice.secondLargestNum(intMap);
+        assertEquals(8, actual);
+    }
+
+     @Test 
+    void testForAllSameNums() {
+        HashMap<String, Integer>intMap = new HashMap<>();
+        intMap.put("curry", 5);
+        intMap.put("lebron", 5);
+        intMap.put("curry", 5);
+        intMap.put("lebron", 5);
+        intMap.put("curry", 5);
+        intMap.put("lebron", 5);
+        int actual = Practice.secondLargestNum(intMap);
+        assertEquals(5, actual);
+    }
+
     // TODO: Make tests for each problem you solve
     
 }
