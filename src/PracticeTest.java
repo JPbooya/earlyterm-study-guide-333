@@ -81,15 +81,31 @@ public class PracticeTest {
         assertEquals(2, actual);
     }
 
+    @Test
+    void testForNoWordsQualify() {
+         ArrayList<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("banana");
+        words.add("cat");
+        words.add("bear");
 
+        int actual = Practice.countWords(words, 6, 10);
 
+        assertEquals(0, actual);
+    }
 
+     @Test
+    void testForAllWordsQualify() {
+         ArrayList<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("banana");
+        words.add("cat");
+        words.add("bear");
 
+        int actual = Practice.countWords(words, 2, 7);
 
-
-
-
-
+        assertEquals(4, actual);
+    }
 
     // ---- // 
     @Test
